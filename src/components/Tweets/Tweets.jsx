@@ -19,7 +19,7 @@ export default function Tweets() {
         console.log('useEffect Tweets')
         const users = await fetchUsers();
         setUsers(users);
-    }, []);
+    },[setUsers] );
 
     const getUsers = async () => {
         const users = await fetchUsers();
