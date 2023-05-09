@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const Title = styled.h1`
   font-size: 48px;
@@ -16,10 +16,15 @@ export const Hero = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  flex-direction: column;
   padding: 60px 0;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 50px;
+  }
 `;
 
 export const ImgWrap = styled.div`
-  width: 800px;
+  width: 80%;
 `;

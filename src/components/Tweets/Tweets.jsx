@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import CardsList from "components/CardsList/CardsList";
 import Filter from "components/Filter/Filter";
@@ -17,6 +17,8 @@ export default function Tweets() {
     const [selectedValue, setSelectedValue] = useState(null);
     const [error, setError] = useState(null);
 
+    const {current: cardsPerPage} = useRef((window.innerWidth < 1200 && window.innerWidth >= 800) ? 4 : 3);
+
     useEffect(() => {
         const fetchData = async ()=> {
             try {
@@ -30,8 +32,6 @@ export default function Tweets() {
     }, []);
 
     const getUsers = async () => {
-        // setError(null);
-
         try {
             const users = await fetchUsers();
             setUsers(users);
@@ -46,22 +46,17 @@ export default function Tweets() {
     }
 
     const getCurrentPageUsers = () => {
-        const endUserIndex = currentPage * 3 ;
+        const endUserIndex = currentPage * cardsPerPage ;
         return filterUsers()?.slice(0, endUserIndex);
     }    
 
     const filterUsers = () => {        
         const followingUsersId = JSON.parse(localStorage.getItem('followingUsersId'));
-        // setError(null);
 
         switch (selectedValue) {
             case filterOptions.follow:
-                // const usersToFollow = users.filter(user => !followingUsersId.includes(user.id));
-                // if (usersToFollow.length === 0) setError('It seems you already follow everyone!');
                 return users.filter(user => !followingUsersId.includes(user.id));
             case filterOptions.followings:
-                // const followingUsers = users.filter(user => followingUsersId.includes(user.id));
-                // if (usersToFollow.length === 0) setError('No following users yet. Follow one!');
                 return users.filter(user => followingUsersId.includes(user.id));
             default:
                 return users;
@@ -85,9 +80,10 @@ export default function Tweets() {
     }
 
     const usersToRender = getCurrentPageUsers();
-    const endOfTweets = filterUsers()?.length / 3 <= currentPage;
+    const endOfTweets = filterUsers()?.length / cardsPerPage <= currentPage;
 
-    if (!currentPage) setCurrentPage(1)
+    if (!currentPage) setCurrentPage(1);
+
     return <TweetsWrap>
         {error && <Msg>{error}</Msg>}
         {usersToRender &&  <>
