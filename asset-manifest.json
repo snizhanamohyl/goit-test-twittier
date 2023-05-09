@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-test-twittier/static/css/main.af2180b6.css",
-    "main.js": "/goit-test-twittier/static/js/main.347b13bc.js",
+    "main.js": "/goit-test-twittier/static/js/main.fb09b164.js",
     "static/js/908.587ab59e.chunk.js": "/goit-test-twittier/static/js/908.587ab59e.chunk.js",
     "static/js/561.dd64a6c1.chunk.js": "/goit-test-twittier/static/js/561.dd64a6c1.chunk.js",
-    "static/js/526.6e5e6847.chunk.js": "/goit-test-twittier/static/js/526.6e5e6847.chunk.js",
+    "static/js/526.325d3b6f.chunk.js": "/goit-test-twittier/static/js/526.325d3b6f.chunk.js",
     "static/js/124.e4219512.chunk.js": "/goit-test-twittier/static/js/124.e4219512.chunk.js",
     "static/media/social-media.jpg": "/goit-test-twittier/static/media/social-media.152e192ccbae4eec7222.jpg",
     "static/media/ask.png": "/goit-test-twittier/static/media/ask.ecde5c9dfbe42e4d5b8e.png",
     "static/media/boy.png": "/goit-test-twittier/static/media/boy.7c9062b41b07d74bbcec.png",
     "index.html": "/goit-test-twittier/index.html",
     "main.af2180b6.css.map": "/goit-test-twittier/static/css/main.af2180b6.css.map",
-    "main.347b13bc.js.map": "/goit-test-twittier/static/js/main.347b13bc.js.map",
+    "main.fb09b164.js.map": "/goit-test-twittier/static/js/main.fb09b164.js.map",
     "908.587ab59e.chunk.js.map": "/goit-test-twittier/static/js/908.587ab59e.chunk.js.map",
     "561.dd64a6c1.chunk.js.map": "/goit-test-twittier/static/js/561.dd64a6c1.chunk.js.map",
-    "526.6e5e6847.chunk.js.map": "/goit-test-twittier/static/js/526.6e5e6847.chunk.js.map",
+    "526.325d3b6f.chunk.js.map": "/goit-test-twittier/static/js/526.325d3b6f.chunk.js.map",
     "124.e4219512.chunk.js.map": "/goit-test-twittier/static/js/124.e4219512.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af2180b6.css",
-    "static/js/main.347b13bc.js"
+    "static/js/main.fb09b164.js"
   ]
 }
