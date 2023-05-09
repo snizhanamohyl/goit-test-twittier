@@ -3,7 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import CardsList from "components/CardsList/CardsList";
 import Filter from "components/Filter/Filter";
 import { fetchUsers } from "services/usersAPI";
-import { TweetsWrap, BackLink, LoadMoreBtn, Msg } from "./Tweets.styled";
+import { TweetsWrap, LoadMoreBtn, Msg } from "./Tweets.styled";
 
 const filterOptions = {
     all: 'all',
