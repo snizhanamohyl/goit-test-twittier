@@ -25,11 +25,18 @@ export default function Tweets() {
 
     setCurrentPage(1);
 
-    useEffect(() => async () => {
-        const users = await fetchUsers();
-        console.log("useEffect users with currentPage dep:", users)
-        setUsers(users);
-    }, [currentPage]);
+    useEffect(() => {
+        const fetchData = async ()=> {
+            const data = await fetchUsers()
+            console.log("useEffect users with currentPage dep:", data)
+            setUsers(data);
+        }
+        fetchData();
+          
+        // const users = await fetchUsers();
+        
+        
+    }, []);
 
     const getUsers = async () => {
         const users = await fetchUsers();
