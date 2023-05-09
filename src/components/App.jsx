@@ -5,7 +5,7 @@ import Layout from "components/Layout/Layout";
 import { lazy } from "react";
 
 const TweetsPage = lazy(() => import('pages/TweetsPage/TweetsPage'));
-console.log('lazy doble')
+console.log('last try')
 
 function App() {
 
