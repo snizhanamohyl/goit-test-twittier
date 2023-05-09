@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/goit-test-twittier/static/css/main.af2180b6.css",
-    "main.js": "/goit-test-twittier/static/js/main.3b591bf7.js",
-    "static/js/504.755dbe2f.chunk.js": "/goit-test-twittier/static/js/504.755dbe2f.chunk.js",
-    "static/js/526.84067fb0.chunk.js": "/goit-test-twittier/static/js/526.84067fb0.chunk.js",
-    "static/js/279.2c004ea1.chunk.js": "/goit-test-twittier/static/js/279.2c004ea1.chunk.js",
+    "main.js": "/goit-test-twittier/static/js/main.8681a2ef.js",
+    "static/js/908.587ab59e.chunk.js": "/goit-test-twittier/static/js/908.587ab59e.chunk.js",
+    "static/js/561.b5cc1fc3.chunk.js": "/goit-test-twittier/static/js/561.b5cc1fc3.chunk.js",
+    "static/js/526.cf42bab3.chunk.js": "/goit-test-twittier/static/js/526.cf42bab3.chunk.js",
+    "static/js/124.e4219512.chunk.js": "/goit-test-twittier/static/js/124.e4219512.chunk.js",
     "static/media/social-media.jpg": "/goit-test-twittier/static/media/social-media.152e192ccbae4eec7222.jpg",
     "static/media/ask.png": "/goit-test-twittier/static/media/ask.ecde5c9dfbe42e4d5b8e.png",
     "static/media/boy.png": "/goit-test-twittier/static/media/boy.7c9062b41b07d74bbcec.png",
     "index.html": "/goit-test-twittier/index.html",
     "main.af2180b6.css.map": "/goit-test-twittier/static/css/main.af2180b6.css.map",
-    "main.3b591bf7.js.map": "/goit-test-twittier/static/js/main.3b591bf7.js.map",
-    "504.755dbe2f.chunk.js.map": "/goit-test-twittier/static/js/504.755dbe2f.chunk.js.map",
-    "526.84067fb0.chunk.js.map": "/goit-test-twittier/static/js/526.84067fb0.chunk.js.map",
-    "279.2c004ea1.chunk.js.map": "/goit-test-twittier/static/js/279.2c004ea1.chunk.js.map"
+    "main.8681a2ef.js.map": "/goit-test-twittier/static/js/main.8681a2ef.js.map",
+    "908.587ab59e.chunk.js.map": "/goit-test-twittier/static/js/908.587ab59e.chunk.js.map",
+    "561.b5cc1fc3.chunk.js.map": "/goit-test-twittier/static/js/561.b5cc1fc3.chunk.js.map",
+    "526.cf42bab3.chunk.js.map": "/goit-test-twittier/static/js/526.cf42bab3.chunk.js.map",
+    "124.e4219512.chunk.js.map": "/goit-test-twittier/static/js/124.e4219512.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af2180b6.css",
-    "static/js/main.3b591bf7.js"
+    "static/js/main.8681a2ef.js"
   ]
 }
