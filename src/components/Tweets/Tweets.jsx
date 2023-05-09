@@ -16,9 +16,6 @@ const filterOptions = {
 //     }
 
 export default function Tweets() {
-    // const valueRef = useRef();
-    // console.log('render time')
-    // const users = useRef(getUsers());
     const [users, setUsers] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedValue, setSelectedValue] = useState(null);

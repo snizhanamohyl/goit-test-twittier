@@ -10,8 +10,9 @@ export default function Card({ user, getUsers }) {
     const {tweets=0, followers=0, avatar = defaultAvatar } = user;
     const [isFollowing, setIsFollowing] = useState(false);
     
-    useEffect(() => async () => {
+    useEffect(() => {
         const followingUsersId = JSON.parse(localStorage.getItem('followingUsersId'));
+        console.log("🚀 ~ file: Card.jsx:15 ~ useEffect ~ followingUsersId:", followingUsersId)
         if (followingUsersId) setIsFollowing(followingUsersId.some(id => id === user.id))
     }, [setIsFollowing, user.id]);
 
@@ -35,7 +36,8 @@ export default function Card({ user, getUsers }) {
             setIsFollowing(true);            
         }
     }
-
+    
+    console.log('isfollowing', isFollowing)
     return <TweetCard>
         <Logo />
         <img src={ask} alt="Messages" />
