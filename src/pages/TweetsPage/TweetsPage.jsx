@@ -4,7 +4,11 @@
 // import { BackLink, LoadMoreBtn, Msg, Tweets } from "./TweetsPage.styled";
 // import Filter from "../../components/Filter/Filter";
 
-import Tweets from "components/Tweets/Tweets";
+import { lazy } from 'react';
+
+// import Tweets from "components/Tweets/Tweets";
+
+const Tweets = lazy(() => import('components/Tweets/Tweets'));
 
 // const filterOptions = {
 //     all: 'all',
