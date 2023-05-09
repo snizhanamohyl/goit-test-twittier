@@ -8,5 +8,7 @@ Tweeter is a web application that allows users to view and follow other users. T
 - CSS  
 - Javascript
 - React
-- API
+- React Hooks
+- REST API
+- AJAX
 
