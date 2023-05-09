@@ -16,6 +16,7 @@ export default function Tweets() {
     const [selectedValue, setSelectedValue] = useState(null);
 
     useEffect(() => async () => {
+        console.log('useEffect Tweets')
         const users = await fetchUsers();
         setUsers(users);
     }, []);

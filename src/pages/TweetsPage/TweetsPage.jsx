@@ -6,8 +6,6 @@
 
 import Tweets from "components/Tweets/Tweets";
 
-console.log('Tweets Page')
-
 // const filterOptions = {
 //     all: 'all',
 //     follow: 'follow',
