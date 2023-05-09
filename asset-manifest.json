@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/goit-test-twittier/static/css/main.af2180b6.css",
-    "main.js": "/goit-test-twittier/static/js/main.4c582bae.js",
+    "main.js": "/goit-test-twittier/static/js/main.fad573cc.js",
     "static/media/social-media.jpg": "/goit-test-twittier/static/media/social-media.152e192ccbae4eec7222.jpg",
     "static/media/ask.png": "/goit-test-twittier/static/media/ask.ecde5c9dfbe42e4d5b8e.png",
     "static/media/boy.png": "/goit-test-twittier/static/media/boy.7c9062b41b07d74bbcec.png",
     "index.html": "/goit-test-twittier/index.html",
     "main.af2180b6.css.map": "/goit-test-twittier/static/css/main.af2180b6.css.map",
-    "main.4c582bae.js.map": "/goit-test-twittier/static/js/main.4c582bae.js.map"
+    "main.fad573cc.js.map": "/goit-test-twittier/static/js/main.fad573cc.js.map"
   },
   "entrypoints": [
     "static/css/main.af2180b6.css",
-    "static/js/main.4c582bae.js"
+    "static/js/main.fad573cc.js"
   ]
 }
