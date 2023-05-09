@@ -1,10 +1,10 @@
-import Logo from "../Logo/Logo";
-import ask from '../../images/ask.png';
-import defaultAvatar from '../../images/boy.png';
-import { AvatarImgWrap, AvatarShadow, InfoWrap, Text, TweetCard, Button } from "./Card.styled";
 import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
-import { changeFollowersNumber } from "../../services/usersAPI";
+import Logo from "components/Logo/Logo";
+import ask from 'images/ask.png';
+import defaultAvatar from 'images/boy.png';
+import { AvatarImgWrap, AvatarShadow, InfoWrap, Text, TweetCard, Button } from "./Card.styled";
+import { changeFollowersNumber } from "services/usersAPI";
 
 export default function Card({ user, getUsers }) {
     const {tweets=0, followers=0, avatar = defaultAvatar } = user;
@@ -47,8 +47,8 @@ export default function Card({ user, getUsers }) {
             </AvatarShadow>
         </div>
             <InfoWrap>
-                <Text>{ tweets} tweets</Text>
-                <Text>{ followers} followers</Text>
+                <Text>{ tweets.toLocaleString("en-US")} tweets</Text>
+                <Text>{ followers.toLocaleString("en-US")} followers</Text>
         </InfoWrap>
         <Button type="button" isfollowing={isFollowing ? 1 : 0} onClick={onClick}>{isFollowing ? 'Following' : 'Follow'}</Button>
     </TweetCard>

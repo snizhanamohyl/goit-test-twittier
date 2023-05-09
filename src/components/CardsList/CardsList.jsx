@@ -1,5 +1,5 @@
-import Card from "../Card/Card";
 import PropTypes from 'prop-types';
+import Card from "../Card/Card";
 import { TweetsList } from "./CardsList.styled";
 
 export default function CardsList({ users, getUsers }) {

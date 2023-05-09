@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const TweetsWrap = styled.div`
@@ -6,20 +5,7 @@ export const TweetsWrap = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 0 80px 0;
-`;
-
-export const BackLink = styled(Link)`
-  align-self: flex-start;
-  font-size: 20px;
-  text-decoration: underline;
-  margin-bottom: 28px;
-  transition: color 0.5s ease;
-
-  &:hover,
-  &:focus {
-    color: var(--bg-primary);
-  }
+  padding-top: 28px;
 `;
 
 export const LoadMoreBtn = styled.button`

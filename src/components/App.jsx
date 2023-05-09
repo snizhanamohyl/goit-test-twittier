@@ -1,14 +1,11 @@
-import { Routes, Route } from "react-router-dom";
-// import TweetsPage from "pages/TweetsPage/TweetsPage";
-import HomePage from "pages/HomePage/HomePage";
-import Layout from "components/Layout/Layout";
 import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "components/Layout/Layout";
 
 const TweetsPage = lazy(() => import('pages/TweetsPage/TweetsPage'));
-console.log('last try')
+const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 
 function App() {
-
   return (
     <Routes>
       <Route path="/" element={<Layout/>} >

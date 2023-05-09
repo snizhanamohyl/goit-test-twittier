@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import CardsList from "components/CardsList/CardsList";
 import Filter from "components/Filter/Filter";
-import { useEffect, useState } from "react";
 import { fetchUsers } from "services/usersAPI";
 import { TweetsWrap, BackLink, LoadMoreBtn, Msg } from "./Tweets.styled";
 
@@ -9,30 +10,33 @@ const filterOptions = {
     follow: 'follow',
     followings: 'followings',
 }
-//     const getAllUsers = async () => {
-//         const users = await fetchUsers();
-//         return
-//         // filterUsers();
-//     }
 
 export default function Tweets() {
     const [users, setUsers] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedValue, setSelectedValue] = useState(null);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async ()=> {
-            const data = await fetchUsers()
-            console.log("useEffect users with currentPage dep:", data)
-            setUsers(data);
+            try {
+                const data = await fetchUsers()
+                setUsers(data);
+            } catch (error) {
+                setError(error.message);
+            }
         }
         fetchData();        
     }, []);
 
     const getUsers = async () => {
-        const users = await fetchUsers();
-        setUsers(users);
-        filterUsers();
+        try {
+            const users = await fetchUsers();
+            setUsers(users);
+            filterUsers();
+        } catch (error) {
+           Notify.failure('Oops something went wrong (')
+        }
     }
 
     const onClick = () => {                                       
@@ -67,10 +71,10 @@ export default function Tweets() {
 
     if (!currentPage) setCurrentPage(1)
     return <TweetsWrap>
-        <BackLink to={'/'}>Go Back</BackLink>
+        { error ? <Msg>Oops something went wrong :(</Msg> : <>
         <Msg>Don't miss out on the latest trends on Twittier, start following the top accounts!</Msg>
         <Filter handleFollowBtnClick={handleFollowBtnClick} filterOptions={filterOptions} selectedValue={ selectedValue} />
         {usersToRender && <CardsList users={usersToRender} getUsers={getUsers} />}
-        {!endOfTweets && <LoadMoreBtn type="button" onClick={ onClick}>Load More</LoadMoreBtn>}
+        {!endOfTweets && usersToRender && <LoadMoreBtn type="button" onClick={ onClick}>Load More</LoadMoreBtn>}</>}
     </TweetsWrap>
 }
