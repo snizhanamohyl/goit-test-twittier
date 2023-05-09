@@ -20,8 +20,10 @@ export default function Tweets() {
     // console.log('render time')
     // const users = useRef(getUsers());
     const [users, setUsers] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(null);
     const [selectedValue, setSelectedValue] = useState(null);
+
+    setCurrentPage(1);
 
     useEffect(() => async () => {
         const users = await fetchUsers();
@@ -65,8 +67,8 @@ export default function Tweets() {
     const usersToRender = getCurrentPageUsers();
     const endOfTweets = filterUsers()?.length / 3 <= currentPage;
 
+    if (!currentPage) setCurrentPage(1)
     return <TweetsWrap>
-        { console.log('users render', users)}
         <BackLink to={'/'}>Go Back</BackLink>
         <Msg>Don't miss out on the latest trends on Twittier, start following the top accounts!</Msg>
         <Filter handleFollowBtnClick={handleFollowBtnClick} filterOptions={filterOptions} selectedValue={ selectedValue} />
